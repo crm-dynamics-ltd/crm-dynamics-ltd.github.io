@@ -8,6 +8,7 @@ params:
     email: "christian@crm-dynamics.co.uk"
   subtitle: "Subtitle"
 
+enableEmoji: true
 sectionPagesMenu: main
 
 # menus:
