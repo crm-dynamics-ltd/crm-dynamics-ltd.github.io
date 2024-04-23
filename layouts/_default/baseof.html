@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html
+  lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <header>{{ partial "header.html" . }}</header>
+    <main class="main-container">
+      <aside class="sidenav">
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      </aside>
+      <section class="main-content">{{ block "main" . }}{{ end }}</section>
+    </main>
+    <footer>{{ partial "footer.html" . }}</footer>
+  </body>
+</html>
