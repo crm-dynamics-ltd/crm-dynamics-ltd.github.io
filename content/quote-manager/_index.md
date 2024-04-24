@@ -5,7 +5,7 @@ date: 2024-04-23T10:21:10+01:00
 
 # Changelog
 
-## 2.4.0.2 (2024-04-23)
+## 2.4.0.3 (2024-04-24)
 
 ### Added
 
@@ -29,3 +29,4 @@ date: 2024-04-23T10:21:10+01:00
 - (#811) Subtotals can now be safely duplicated.
 - (#811) The recalculate plugin can now detect subtotals correctly.
 - `crmd_make` column would throw an error when is not configured in the search grid.
+- Comments, subtotals and sections would not flag the quote product correctly when a picture is attached.
