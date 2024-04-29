@@ -1,9 +1,13 @@
 ---
-title: "Scheduler"
-date: 2024-04-23T10:08:57+01:00
+weight: 999
+title: "Changelog"
+description: ""
+icon: "history"
+date: "2024-04-29T11:03:46+01:00"
+lastmod: "2024-04-29T11:03:46+01:00"
+draft: false
+toc: true
 ---
-
-# Changelog
 
 ## 0.8.1 (2024-03-20)
 

@@ -1,32 +1,29 @@
-baseURL: "https://example.org/"
+baseURL: "/"
 languageCode: "en-us"
-title: "CRM Dynamics Ltd - Docs"
+# title: "CRM Dynamics"
+enableEmoji: true
+
+defaultContentLanguage: "en"
+
+languages:
+  en:
+    languageName: "English"
+    title: "CRM Dynamics Docs"
 
 params:
+  docs:
+    darkMode: true
+  footer:
+    copyright: "@:YEAR: [CRM Dynamics Limited](https://crm-dynamics.co.uk)"
   contact:
     name: "Christian Dornetto"
     email: "christian@crm-dynamics.co.uk"
   subtitle: "Subtitle"
 
-enableEmoji: true
-sectionPagesMenu: main
-
-# menus:
-#   main:
-#     - name: "Home"
-#       pageRef: "/"
-#       weight: -1
-#     - name: "Guides"
-#       pageRef: "/guides"
-#       weight: 20
-#     - name: "Posts"
-#       pageRef: "/posts"
-#       weight: 40
-#     - name: "Tags"
-#       pageRef: "/tags"
-#       weight: 50
-
 module:
   hugoVersion:
-    extended: false
+    extended: true
     min: "0.116.0"
+  imports:
+    - path: "github.com/colinwilson/lotusdocs"
+    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"

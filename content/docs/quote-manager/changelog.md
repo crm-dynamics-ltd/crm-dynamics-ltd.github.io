@@ -1,9 +1,13 @@
 ---
-title: "Quote Manager"
-date: 2024-04-23T10:21:10+01:00
+weight: 999
+title: "Changelog"
+description: ""
+icon: "history"
+date: "2024-04-29T11:00:54+01:00"
+lastmod: "2024-04-29T11:00:54+01:00"
+draft: false
+toc: true
 ---
-
-# Changelog
 
 ## 2.4.0.3 (2024-04-24)
 

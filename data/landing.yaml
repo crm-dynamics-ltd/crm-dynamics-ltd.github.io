@@ -1,0 +1,37 @@
+# Note: Template blocks require a 'weight' parameter so they're correctly ordered on the landing page
+
+# Hero
+hero:
+  enable: true
+  weight: 10
+  template: hero
+
+  badge:
+    text: v0.1.0
+    color: primary # primary, secondary, success, danger, warning, info, light, dark
+    pill: false
+    soft: true
+
+  titleLogo:
+    filename: "iamges/crmd-logo.png"
+    alt: "CRM Dynamics Limited Logo"
+    height: 80px
+
+  title: "CRM Dynamics Docs"
+  
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "/docs"
+
+# Feature Grid
+features:
+  enable: false
+  weight: 20
+  template: feature grid
+
+# Image compare
+image_compare:
+  enable: false
+  weight: 30
+  template: image compare
