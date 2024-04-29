@@ -1,7 +1,12 @@
 baseURL: "/"
 languageCode: "en-us"
-# title: "CRM Dynamics"
 enableEmoji: true
+
+outputs:
+  home:
+    - html
+    - rss
+    - search
 
 defaultContentLanguage: "en"
 
@@ -11,19 +16,18 @@ languages:
     title: "CRM Dynamics Docs"
 
 params:
-  docs:
-    darkMode: true
-  footer:
-    copyright: "@:YEAR: [CRM Dynamics Limited](https://crm-dynamics.co.uk)"
-  contact:
+  author:
     name: "Christian Dornetto"
     email: "christian@crm-dynamics.co.uk"
   subtitle: "Subtitle"
+  titleSeparator: "|"
+  themeVariantAuto:
+    - zen-light
+    - zen-dark
 
 module:
   hugoVersion:
     extended: true
     min: "0.116.0"
   imports:
-    - path: "github.com/colinwilson/lotusdocs"
-    - path: "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    - path: github.com/McShelby/hugo-theme-relearn

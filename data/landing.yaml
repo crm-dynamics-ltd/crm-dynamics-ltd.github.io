@@ -6,18 +6,13 @@ hero:
   weight: 10
   template: hero
 
-  badge:
-    text: v0.1.0
-    color: primary # primary, secondary, success, danger, warning, info, light, dark
-    pill: false
-    soft: true
-
   titleLogo:
     filename: "iamges/crmd-logo.png"
     alt: "CRM Dynamics Limited Logo"
     height: 80px
 
   title: "CRM Dynamics Docs"
+  subtitle: "Information about latest product realeases and quick start guides."
   
   ctaButton:
     icon: rocket_launch
