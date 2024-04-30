@@ -119,13 +119,15 @@ Below are some example snippets that can be quickly referenced and used in your 
 This content is experimental and can cause unwanted behaviour.
 {{% /notice %}}
 
-The system allows to use the new file and images columns in Dynamics to fetch complext data or images and mail merge them into the final document. To target a File column simply use the **File** function and pass the name of the column surrounded by double quotes in the parentheses. The system will automatically fetch the file content and insert it at the token position.
+The system allows to use the new file and images columns in Dynamics to fetch complext data or images and mail merge them into the final document. To target a File column simply use the **File** function and pass the name of the column surrounded by double quotes in the parentheses. The system will automatically fetch the file content and insert it at the token position. `${[File("prefix_filecolumn")]}`
 
-File column: `${[File("prefix_filecolumn")]}`
+However this by itself is not very useful as it returns the file in binary format. By using the **ToPlainText** function, in the **Convert** collection, we can convert the binary data into its string representation, which can then be inserted into the document.
+
+File column: `${[Convert.ToPlainText(File("prefix_filecolumn"))]}`. _Place this snipped of code anywhere in the template_.
 
 To fetch an image it is a very similar process but the data needs to be converted to a special url that the system can display. For this we can use the **Convert** collection which includes the **ToBase64SrcString** function. This function expects binary data (which comes from the File function) and converts it into a url that an image can correctly display.
 
-Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. Place this snipped into the source of the image component in the editor.
+Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. _Place this snipped into the source of the image component in the editor_.
 
 ![image source component](/docs/dms/images/image-dialog.png)
 

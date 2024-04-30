@@ -8,7 +8,7 @@ weight: 999
 
 ### Added
 
-- Added a more flexible system to perform mail merge. The system can now mail merge from **file** and **image** columns. See [Mail Merge Guide](/docs/dms/guides/mail-merge) for more information.
+- Added a more flexible system to perform mail merge. The system can now mail merge from **file** and **image** columns. See [Mail Merge Guide](/dms/mail-merge#files-and-images) for more information.
 
 ### Changed
 
