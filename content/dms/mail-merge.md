@@ -89,28 +89,28 @@ The table below explains in details how to use the formatting options for a date
 Below are some example snippets that can be quickly referenced and used in your templates.
 | Snippet | Result |
 |---------|--------|
-| `DateTime.Now.ToString("MM/dd/yyyy")` | 05/29/2015 |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy")` | Friday, 29 May 2015 |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy")` | Friday, 29 May 2015 05:50 |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy")` | Friday, 29 May 2015 05:50 AM |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy")` | Friday, 29 May 2015 5:50 |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy")` | Friday, 29 May 2015 5:50 AM |
-| `DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")` | Friday, 29 May 2015 05:50:06 |
-| `DateTime.Now.ToString("MM/dd/yyyy HH:mm")` | 05/29/2015 05:50 |
-| `DateTime.Now.ToString("MM/dd/yyyy hh:mm tt")` | 05/29/2015 05:50 AM |
-| `DateTime.Now.ToString("MM/dd/yyyy H:mm")` | 05/29/2015 5:50 |
-| `DateTime.Now.ToString("MM/dd/yyyy h:mm tt")` | 05/29/2015 5:50 AM |
-| `DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")` | 05/29/2015 05:50:06 |
-| `DateTime.Now.ToString("MMMM dd")` | May 29 |
-| `DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK")` | 2015-05-16T05:50:06.7199222-04:00 |
-| `DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")` | Fri, 16 May 2015 05:50:06 GMT |
-| `DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss")` | 2015-05-16T05:50:06 |
-| `DateTime.Now.ToString("HH:mm")` | 05:50 |
-| `DateTime.Now.ToString("hh:mm tt")` | 05:50 AM |
-| `DateTime.Now.ToString("H:mm")` | 5:50 |
-| `DateTime.Now.ToString("h:mm tt")` | 5:50 AM |
-| `DateTime.Now.ToString("HH:mm:ss")` | 05:50:06 |
-| `DateTime.Now.ToString("yyyy MMMM")` | 2015 May |
+| `${[DateTime.Now.ToString("MM/dd/yyyy")]}` | 05/29/2015 |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy")]}` | Friday, 29 May 2015 |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy")]}` | Friday, 29 May 2015 05:50 |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy")]}` | Friday, 29 May 2015 05:50 AM |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy")]}` | Friday, 29 May 2015 5:50 |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy")]}` | Friday, 29 May 2015 5:50 AM |
+| `${[DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss")]}` | Friday, 29 May 2015 05:50:06 |
+| `${[DateTime.Now.ToString("MM/dd/yyyy HH:mm")]}` | 05/29/2015 05:50 |
+| `${[DateTime.Now.ToString("MM/dd/yyyy hh:mm tt")]}` | 05/29/2015 05:50 AM |
+| `${[DateTime.Now.ToString("MM/dd/yyyy H:mm")]}` | 05/29/2015 5:50 |
+| `${[DateTime.Now.ToString("MM/dd/yyyy h:mm tt")]}` | 05/29/2015 5:50 AM |
+| `${[DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")]}` | 05/29/2015 05:50:06 |
+| `${[DateTime.Now.ToString("MMMM dd")]}` | May 29 |
+| `${[DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK")]}` | 2015-05-16T05:50:06.7199222-04:00 |
+| `${[DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")]}` | Fri, 16 May 2015 05:50:06 GMT |
+| `${[DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss")]}` | 2015-05-16T05:50:06 |
+| `${[DateTime.Now.ToString("HH:mm")]}` | 05:50 |
+| `${[DateTime.Now.ToString("hh:mm tt")]}` | 05:50 AM |
+| `${[DateTime.Now.ToString("H:mm")]}` | 5:50 |
+| `${[DateTime.Now.ToString("h:mm tt")]}` | 5:50 AM |
+| `${[DateTime.Now.ToString("HH:mm:ss")]}` | 05:50:06 |
+| `${[DateTime.Now.ToString("yyyy MMMM")]}` | 2015 May |
 {{% /expand %}}
 
 ### Files and Images
@@ -125,7 +125,7 @@ However this by itself is not very useful as it returns the file in binary forma
 
 File column: `${[Convert.ToPlainText(File("prefix_filecolumn"))]}`. _Place this snipped of code anywhere in the template_.
 
-To fetch an image it is a very similar process but the data needs to be converted to a special url that the system can display. For this we can use the **Convert** collection which includes the **ToBase64SrcString** function. This function expects binary data (which comes from the File function) and converts it into a url that an image can correctly display.
+To fetch an image it is a very similar process but the data needs to be converted to a special url that the system can display. We can use the **Convert** collection again which includes the **ToBase64SrcString** function. This function expects binary data (which comes from the File function) and converts it into a url that an image component can correctly display.
 
 Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. _Place this snipped into the source of the image component in the editor_.
 
