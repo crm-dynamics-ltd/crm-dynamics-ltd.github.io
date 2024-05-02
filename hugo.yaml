@@ -8,6 +8,11 @@ outputs:
     - rss
     - search
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 defaultContentLanguage: "en"
 
 languages:
