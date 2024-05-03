@@ -1,6 +1,8 @@
 ---
 title: "Quick Start"
 date: 2024-04-29T15:01:27+01:00
+collapsibleMenu: true
+alwaysopen: false
 weight: 1
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Mail Merge"
-weight: 100
+weight: 10
 ---
 
 ## Basics
