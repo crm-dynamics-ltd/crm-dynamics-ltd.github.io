@@ -33,3 +33,4 @@ This version revisit how subtotals work by removing the header counter-part. Pro
 - **crmd_make** column would throw an error when is not configured in the search grid.
 - Comments, subtotals and sections would not flag the quote product correctly when a picture is attached.
 - Width of the editor control to display the edito and delete icon horizontally rather than vertically.
+- "New" subtotals could not be deleted using the bulk delete action.
