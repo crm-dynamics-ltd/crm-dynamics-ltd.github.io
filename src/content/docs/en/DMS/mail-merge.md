@@ -1,5 +1,5 @@
 ---
-title: "Mail Merge"
+title: 'Mail Merge'
 sidebar:
   order: 0
 ---
@@ -13,7 +13,7 @@ In CRMDocs365, anything that requires calculations or mail merging with data fro
 To insert a formula simply start a formula placeholder as explained above and insert your logic. Below is the list of supported operators and some examples.
 
 - All maths operators + - \* \*\* / %
-- Comparison > < >= \<= == !=
+- Comparison > < >= <= == !=
 - Mail merge tokens `${[prefix_column]}`
 - Conditionals `${if 1 + 2 == 3 (true) (false)}`
 
@@ -55,35 +55,37 @@ The simplest function within DateTime is **Now**. This function returns the curr
 
 <details>
 <summary>DateTime formatting reference</summary>
+
 The table below explains in details how to use the formatting options for a date object. Some of the formatting are quite advanced and are only used in special cases.
-| Token | Description |
-|-------|-------------|
-| d | Day of the month as a number from 1 through 31. |
-| dd | Day of the month as a number from 01 through 31. |
-| ddd | Abbreviated name of the day (Mon, Tue, etc.). |
-| dddd | Full name of the day (Monday, Tuesday, etc.). |
-| h | 12-hour clock hour (7). |
-| hh | 12-hour clock hour with leading zero (07). |
-| H | 24-hour clock hour (19). |
-| HH | 24-hour clock hour with leading zero. |
-| m | Minutes. |
-| mm | Minutes with leading zero. |
-| M | Month number (5). |
-| MM | Month number with leading zero (05). |
-| MMM | Abbreviated month name (Nov, Dec, etc.). |
-| MMMM | Full month name (November, December, etc.). |
-| s | Seconds. |
-| ss | Seconds with leading zero. |
-| t | Abbreviated AM / PM (A or P). |
-| tt | AM / PM. |
-| y | Up to two digits year (24). |
-| yy | Up to three digits year with leding zero (024). |
-| yyy | Full year (2024). |
-| yyyy | Full year with leading zero (2024). |
-| K | Timezone information (+05:00). |
-| z | Signed offset of the local operating system time zone from UTC, measured in hours (+4). |
-| zz | Same as **z** but with leading 0 (+04). |
-| zzz | Same as **zz** but measured in hours and minutes (+04:00). |
+
+| Token     | Description                                                                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| d         | Day of the month as a number from 1 through 31.                                                                                                                  |
+| dd        | Day of the month as a number from 01 through 31.                                                                                                                 |
+| ddd       | Abbreviated name of the day (Mon, Tue, etc.).                                                                                                                    |
+| dddd      | Full name of the day (Monday, Tuesday, etc.).                                                                                                                    |
+| h         | 12-hour clock hour (7).                                                                                                                                          |
+| hh        | 12-hour clock hour with leading zero (07).                                                                                                                       |
+| H         | 24-hour clock hour (19).                                                                                                                                         |
+| HH        | 24-hour clock hour with leading zero.                                                                                                                            |
+| m         | Minutes.                                                                                                                                                         |
+| mm        | Minutes with leading zero.                                                                                                                                       |
+| M         | Month number (5).                                                                                                                                                |
+| MM        | Month number with leading zero (05).                                                                                                                             |
+| MMM       | Abbreviated month name (Nov, Dec, etc.).                                                                                                                         |
+| MMMM      | Full month name (November, December, etc.).                                                                                                                      |
+| s         | Seconds.                                                                                                                                                         |
+| ss        | Seconds with leading zero.                                                                                                                                       |
+| t         | Abbreviated AM / PM (A or P).                                                                                                                                    |
+| tt        | AM / PM.                                                                                                                                                         |
+| y         | Up to two digits year (24).                                                                                                                                      |
+| yy        | Up to three digits year with leding zero (024).                                                                                                                  |
+| yyy       | Full year (2024).                                                                                                                                                |
+| yyyy      | Full year with leading zero (2024).                                                                                                                              |
+| K         | Timezone information (+05:00).                                                                                                                                   |
+| z         | Signed offset of the local operating system time zone from UTC, measured in hours (+4).                                                                          |
+| zz        | Same as **z** but with leading 0 (+04).                                                                                                                          |
+| zzz       | Same as **zz** but measured in hours and minutes (+04:00).                                                                                                       |
 | f-fffffff | Each **f** represents a significant digit in the seconds fraction. a single f represents tenths of a second while seven fs represent ten-millionths of a second. |
 
 Below are some example snippets that can be quickly referenced and used in your templates.
