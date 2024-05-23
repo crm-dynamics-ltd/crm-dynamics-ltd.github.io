@@ -1,18 +1,19 @@
 ---
 title: "Mail Merge"
-weight: 10
+sidebar:
+  order: 0
 ---
 
 ## Basics
 
-In CRMDocs365, anything that requires calculations or mail merging with data from Dataverse needs to be placed between formula delimiters ${ and }. **This includes mail merge tokens and if statements**.
+In CRMDocs365, anything that requires calculations or mail merging with data from Dataverse needs to be placed between formula delimiters `${` and `}`. **This includes mail merge tokens and if statements**.
 
 ## Formulas
 
 To insert a formula simply start a formula placeholder as explained above and insert your logic. Below is the list of supported operators and some examples.
 
 - All maths operators + - \* \*\* / %
-- Comparison > < >= <= == !=
+- Comparison > < >= \<= == !=
 - Mail merge tokens `${[prefix_column]}`
 - Conditionals `${if 1 + 2 == 3 (true) (false)}`
 
@@ -42,9 +43,7 @@ Below is a collection of built-in functions provided by the framework. These fun
 
 The system provides with a **DateTime** collection of date related functions.
 
-{{% notice style="info" %}}
 The system will only provide the date and time in UTC format. This is important to know when it comes to signature and timestamps.
-{{% /notice %}}
 
 The simplest function within DateTime is **Now**. This function returns the current date and time object which can then be formatted using several different modifiers.
 
@@ -54,7 +53,8 @@ The simplest function within DateTime is **Now**. This function returns the curr
 | `${[DateTime.Now.ToShortDateString()]}`    | Date only                                                          |
 | `${[DateTime.Now.ToString("dd-MM-yyyy")]}` | Date and time formatted using the specific pattern in parentheses. |
 
-{{% expand title="DateTime formatting reference" %}}
+<details>
+<summary>DateTime formatting reference</summary>
 The table below explains in details how to use the formatting options for a date object. Some of the formatting are quite advanced and are only used in special cases.
 | Token | Description |
 |-------|-------------|
@@ -102,22 +102,21 @@ Below are some example snippets that can be quickly referenced and used in your 
 | `${[DateTime.Now.ToString("MM/dd/yyyy h:mm tt")]}` | 05/29/2015 5:50 AM |
 | `${[DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss")]}` | 05/29/2015 05:50:06 |
 | `${[DateTime.Now.ToString("MMMM dd")]}` | May 29 |
-| `${[DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss.fffffffK")]}` | 2015-05-16T05:50:06.7199222-04:00 |
-| `${[DateTime.Now.ToString("ddd, dd MMM yyy HH’:’mm’:’ss ‘GMT’")]}` | Fri, 16 May 2015 05:50:06 GMT |
-| `${[DateTime.Now.ToString("yyyy’-‘MM’-‘dd’T’HH’:’mm’:’ss")]}` | 2015-05-16T05:50:06 |
+| `${[DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK")]}` | 2015-05-16T05:50:06.7199222-04:00 |
+| `${[DateTime.Now.ToString("ddd, dd MMM yyy HH:mm:ss GMT")]}` | Fri, 16 May 2015 05:50:06 GMT |
+| `${[DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")]}` | 2015-05-16T05:50:06 |
 | `${[DateTime.Now.ToString("HH:mm")]}` | 05:50 |
 | `${[DateTime.Now.ToString("hh:mm tt")]}` | 05:50 AM |
 | `${[DateTime.Now.ToString("H:mm")]}` | 5:50 |
 | `${[DateTime.Now.ToString("h:mm tt")]}` | 5:50 AM |
 | `${[DateTime.Now.ToString("HH:mm:ss")]}` | 05:50:06 |
 | `${[DateTime.Now.ToString("yyyy MMMM")]}` | 2015 May |
-{{% /expand %}}
+
+</details>
 
 ### Files and Images
 
-{{% notice style="warning" %}}
 This content is experimental and can cause unwanted behaviour.
-{{% /notice %}}
 
 The system allows to use the new file and images columns in Dynamics to fetch complext data or images and mail merge them into the final document. To target a File column simply use the **File** function and pass the name of the column surrounded by double quotes in the parentheses. The system will automatically fetch the file content and insert it at the token position. `${[File("prefix_filecolumn")]}`
 
@@ -129,19 +128,13 @@ To fetch an image it is a very similar process but the data needs to be converte
 
 Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. _Place this snipped into the source of the image component in the editor_.
 
-![image source component](/docs/dms/images/image-dialog.png)
+![image source component](../../../../assets/dms/images/image-dialog.png)
 
 Using this snippet alone anywhere else will **NOT** display an image but a very long string instead.
 
 ## Conditionals
 
 Conditionals allow to toggle specific parts of the templates or text depending on one or more conditions. The condition is evaluated and must return a **True** or **False** result (think of it as a yes or no). After the condition is evaluated then the corresponding branch will be evaluated further, while the other will be ignored.
-
-```mermaid { align="center" zoom="true" }
-graph TD;
-    If{Evaluate condition} --> Then[Condition is true]
-    If --> Else[Condition is false]
-```
 
 To create a conditional start with the word **if** followed by a **condition** or **formula** and followed by two sets of parentheses for the true outcome and false outcome respectively. Mail merge tokens are allowed to be used in any part of the if statement and the value will be used when evaluating the condition. See the example below:
 

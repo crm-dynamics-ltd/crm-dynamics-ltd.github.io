@@ -1,19 +1,19 @@
 ---
 title: "Samples"
 date: 2024-05-03T16:00:43+01:00
-collapsibleMenu: false
-alwaysopen: false
+sidebar:
+  order: 21
 ---
 
-{{% notice style="tip" %}}
-You can the samples in this page to create new content for templates or use it to migrate from one version to another.
-{{% /notice %}}
+:::tip
+You can copy and paste these snippets directly into your template to get some starter content.
+:::
 
 ## Signee Templates
 
 ### Queries
 
-```xml { title="Primary" }
+```xml title="Primary"
 <fetch>
   <entity name="crmd_dms_proposal">
     <filter type="and">
@@ -23,9 +23,8 @@ You can the samples in this page to create new content for templates or use it t
 </fetch>
 ```
 
-{{% badge style="info" title="New" %}}0.8.0+{{% /badge %}}
-
-```xml { title="Query1" }
+```xml title="Query1"
+<!-- v0.8.8+ -->
 <fetch>
   <entity name="crmd_dms_signee">
     <filter type="and">
