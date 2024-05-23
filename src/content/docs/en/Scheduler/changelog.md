@@ -4,14 +4,14 @@ sidebar:
   order: 99
 ---
 
-## 1.0.0 (2024-05-??)
+<!-- ## 1.0.0 (2024-05-??)
 
 ### Added
 
 - The timeline displays a loading screen when an operation, such as moving an item, is in progress.
 - Items are retrieve only within the date range displayed in the timeline. Panning or changing the zoom within the timeline triggers the system to fetch the items with the date range.
 
----
+--- -->
 
 ## 0.8.1 (2024-03-20)
 
