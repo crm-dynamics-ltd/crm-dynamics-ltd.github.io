@@ -35,9 +35,34 @@ Lookups, Dates and OptionSet also have an extra **formatted** value that can be 
 
 To access the formatted value simply add the suffix **\_formatted** to the token: `${[primarycontactid_formatted]}`
 
+## Conditionals
+
+Conditionals allow to toggle specific parts of the templates or text depending on one or more conditions. The condition is evaluated and must return a **True** or **False** result (think of it as a yes or no). After the condition is evaluated then the corresponding branch will be evaluated further, while the other will be ignored.
+
+To create a conditional start with the word **if** followed by a **condition** or **formula** and followed by two sets of parentheses for the true outcome and false outcome respectively. Mail merge tokens are allowed to be used in any part of the if statement and the value will be used when evaluating the condition. See the example below:
+
+`${if [prefix_column] != null (column contains data) (column does not contain data)}`
+
 ## Built-in functions
 
 Below is a collection of built-in functions provided by the framework. These functions perform complex tasks otherwise not possbile with simple mail merging techniques. Most of the functions are grouped into collections and each individual function can be accessed using the dot notation (**Collection.Function**). It is important to use the function during the mail merge and not the collection alone, to avoid unwanted errors. For example **DateTime** will not give you the current time; **DateTime.Now** will.
+
+### Page break
+
+:::caution
+Currently the page breaks only works when inside a **\<pre>** element. To do this, highlight the page break tag and change the type from **paragraph** to **preformatted**.
+:::
+
+To add a page break to the document you can use the `${[page_break]}` mail merge function which will insert a page break at that position when the document is generated.
+
+:::tip
+You can also mark a page break as conditional. The following code will insert the page break then the _column_ contains data.
+
+```
+${if [column] != null ([page_break])}
+```
+
+:::
 
 ### Date and Time
 
@@ -133,11 +158,3 @@ Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. _Pla
 ![image source component](../../../assets/dms/images/image-dialog.png)
 
 Using this snippet alone anywhere else will **NOT** display an image but a very long string instead.
-
-## Conditionals
-
-Conditionals allow to toggle specific parts of the templates or text depending on one or more conditions. The condition is evaluated and must return a **True** or **False** result (think of it as a yes or no). After the condition is evaluated then the corresponding branch will be evaluated further, while the other will be ignored.
-
-To create a conditional start with the word **if** followed by a **condition** or **formula** and followed by two sets of parentheses for the true outcome and false outcome respectively. Mail merge tokens are allowed to be used in any part of the if statement and the value will be used when evaluating the condition. See the example below:
-
-`${if [prefix_column] != null (column contains data) (column does not contain data)}`
