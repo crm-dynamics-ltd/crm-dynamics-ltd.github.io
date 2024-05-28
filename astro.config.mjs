@@ -17,10 +17,11 @@ export default defineConfig({
         youtube: 'https://www.youtube.com/@crmdynamicslimited3905',
       },
       lastUpdated: true,
-      defaultLocale: 'en',
+      defaultLocale: 'root',
       locales: {
-        en: {
-          label: 'English',
+        root: {
+          label: 'Root',
+          lang: 'en',
         },
       },
       sidebar: [

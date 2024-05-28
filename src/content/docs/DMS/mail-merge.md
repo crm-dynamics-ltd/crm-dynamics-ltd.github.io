@@ -130,7 +130,7 @@ To fetch an image it is a very similar process but the data needs to be converte
 
 Image column: `${[Convert.ToBase64SrcString(File("prefix_imagecolumn"))]}`. _Place this snipped into the source of the image component in the editor_.
 
-![image source component](../../../../assets/dms/images/image-dialog.png)
+![image source component](../../../assets/dms/images/image-dialog.png)
 
 Using this snippet alone anywhere else will **NOT** display an image but a very long string instead.
 
