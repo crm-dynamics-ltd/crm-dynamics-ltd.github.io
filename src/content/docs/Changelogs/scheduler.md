@@ -1,7 +1,5 @@
 ---
-title: "Changelog"
-sidebar:
-  order: 99
+title: "Scheduler"
 ---
 
 <!-- ## 1.0.0 (2024-05-??)

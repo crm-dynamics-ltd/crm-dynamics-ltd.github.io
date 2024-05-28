@@ -1,7 +1,5 @@
 ---
-title: 'Changelog'
-sidebar:
-  order: 99
+title: 'CRM Docs'
 ---
 
 ## 0.8.0 (2024-05-01)

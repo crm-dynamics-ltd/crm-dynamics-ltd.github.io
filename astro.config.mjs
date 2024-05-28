@@ -20,28 +20,10 @@ export default defineConfig({
       defaultLocale: 'root',
       locales: {
         root: {
-          label: 'Root',
+          label: 'English',
           lang: 'en',
         },
       },
-      sidebar: [
-        {
-          label: 'Home',
-          link: '/',
-        },
-        {
-          label: 'CRM Docs',
-          autogenerate: { directory: 'DMS', collapsed: true },
-        },
-        {
-          label: 'Quote Manager',
-          autogenerate: { directory: 'Quote Manager', collapsed: true },
-        },
-        {
-          label: 'Scheduler',
-          autogenerate: { directory: 'Scheduler', collapsed: true },
-        },
-      ],
     }),
   ],
 });
