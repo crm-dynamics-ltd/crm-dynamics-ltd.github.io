@@ -1,15 +1,32 @@
 ---
-title: "Scheduler"
+title: 'Scheduler'
 ---
 
-<!-- ## 1.0.0 (2024-05-??)
+## 1.0.0 (2024-06-14)
+
+First release! In this version we added the ability to save filters to personal views. These views are stored in the dynamics environment and offer a more permanent way to save and re-use filters.
+Filters are also saved every time they are changed and they are stored in the browser local storage. They are applied again each time the scheduler is loaded.
+
+There has been a lot of work in improving the general performance of the application. The scheduler now loads much faster and only retrieves the items for the current view date range.
 
 ### Added
 
 - The timeline displays a loading screen when an operation, such as moving an item, is in progress.
 - Items are retrieve only within the date range displayed in the timeline. Panning or changing the zoom within the timeline triggers the system to fetch the items with the date range.
+- Added resource filtering to allow the selection of resources and groups.
+- Filters are persisted in the browser and applied when the scheduler is loaded.
+- Filters can be saved as a "personal view".
 
---- -->
+### Changed
+
+- Users of the scheduler now require the **CRMD Scheduler - User** security role.
+- Settings are only accessible by System Administrators.
+
+### Fixed
+
+- Drastically improved the loading time when accessing the scheduler timeline.
+
+---
 
 ## 0.8.1 (2024-03-20)
 
