@@ -8,9 +8,9 @@ export default defineConfig({
     starlight({
       title: 'CRM Dynamics Docs',
       description: 'CRM Dynamics product documentation.',
-      favicon: './src/assets/crmd-logo.png',
+      favicon: '/src/assets/crmd-logo.png',
       logo: {
-        src: './src/assets/crmd-logo.png',
+        src: '/src/assets/crmd-logo.png',
       },
       social: {
         email: 'mailto:christian@crm-dynamics.co.uk',
@@ -24,6 +24,24 @@ export default defineConfig({
           lang: 'en',
         },
       },
+      sidebar: [
+        {
+          label: 'Home',
+          link: '/',
+        },
+        {
+          label: 'CRM Docs',
+          autogenerate: { directory: '/dms' },
+        },
+        {
+          label: 'Quote Manager',
+          autogenerate: { directory: '/quote-manager' },
+        },
+        {
+          label: 'Changelogs',
+          autogenerate: { directory: '/changelogs' },
+        },
+      ],
     }),
   ],
 });
