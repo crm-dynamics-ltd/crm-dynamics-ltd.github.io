@@ -2,11 +2,19 @@
 title: 'Quote Manager'
 ---
 
-## Upcoming
+## 2.5.0 (2024-06-19)
+
+Added "required suggestions", prompt to refresh prices and missing translations.
 
 ### Added
 
 - Refresh prices prompt when selecting an account after cloning the quote. (#830)
+- Product suggestions can now be marked as **required**. These suggestions will be automatically added together with the quote product and can be manually removed if not needed. (#833)
+- Added default search method configuration option (Preview). (#828)
+- Missing translations for closing and locking a quote.
+- German translations (Dialogs and Quote Header form). (#834)
+- Spanish translations (Dialogs and Quote Header form). (#834)
+- Japanese translations (Dialogs and Quote Header form). (#834)
 
 ### Fixed
 
@@ -21,7 +29,7 @@ This version revisit how subtotals work by removing the header counter-part. Pro
 ### Added
 
 - Context menu entry for subtotals. (#811)
-- Additional url column **crmd_url** for website link on each quote product line. The product line displays a **globe icon** that can be clicked and a dialog pops up allowing the user to enter the url. If the url is valid, you can <kbd>CTRL</kbd> + <kbd>Click</kbd> the globe to navigate to the url. The same column exists for the product table and if it contains data it will populate the quote product automatically when adding it to a quote. (#810)
+- Additional url column **crmd_url** for website link on each quote product line. The product line displays a **globe icon** that can be clicked and a dialog pops up allowing the user to enter the url. If the url is valid, you can <kbd>CTRL</kbd> + Click the globe to navigate to the url. The same column exists for the product table and if it contains data it will populate the quote product automatically when adding it to a quote. (#810)
 - Title column **crmd_title** on the quote header. This field will be displayed in place of the old _Search Grid_ and _Price Management Grid_ at the top left of the quote manager window. (#089)
 - Missing translation for the alert when more than one product is returned. This happens when trying to add the products without searching.
 
