@@ -2,6 +2,14 @@
 title: 'Quote Manager'
 ---
 
+## 2.5.1 (2024-06-21)
+
+### Fixed
+- Spanish translations containing unwanted characters.
+- Search grid would jump to the top when selecting or deselecting an item. (#836)
+- Refresh prices dialog would error when no price list is selected and the system is configured not to use price list items. (#835)
+- Subtotals now do not include **Configuration** items in their calculation. (#838)
+
 ## 2.5.0 (2024-06-19)
 
 Added "required suggestions", prompt to refresh prices and missing translations.
@@ -10,7 +18,7 @@ Added "required suggestions", prompt to refresh prices and missing translations.
 
 - Refresh prices prompt when selecting an account after cloning the quote. (#830)
 - Product suggestions can now be marked as **required**. These suggestions will be automatically added together with the quote product and can be manually removed if not needed. (#833)
-- Added default search method configuration option (Preview). (#828)
+- Added default search configuration option (Preview). (#828)
 - Missing translations for closing and locking a quote.
 - German translations (Dialogs and Quote Header form). (#834)
 - Spanish translations (Dialogs and Quote Header form). (#834)

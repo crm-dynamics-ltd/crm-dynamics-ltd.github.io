@@ -15,6 +15,31 @@ To configure the default search option you need to use advanced find to search f
   "AdditionalSearchFields": [
     // Fields omitted for brevity
   ],
-  "defaultSearchOption": "prefix_column"
+  "searchDefaults": {
+    "mode": "contains", // Can be set to equal or contains
+    "column": "prefix_column", // Logical name of the column
+    "additionalFilters": [
+      {
+        "id": "Standard",
+        "value": true
+      },
+      {
+        "id": "MainUnits",
+        "value": true
+      },
+      {
+        "id": "Configurations",
+        "value": true
+      },
+      {
+        "id": "Choice",
+        "value": true
+      },
+      {
+        "id": "DiscountListOnly",
+        "value": false
+      }
+    ]
+  }
 }
 ```
