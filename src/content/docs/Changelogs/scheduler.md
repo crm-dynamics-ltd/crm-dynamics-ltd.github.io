@@ -11,7 +11,7 @@ title: 'Scheduler'
 ### Fixed
 
 - Issue preventing items to be displayed when adding them to the timeline.
-- Chaching of table metadata to improve performance.
+- Caching of table metadata to improve performance.
 
 ---
 
