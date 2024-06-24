@@ -2,6 +2,19 @@
 title: 'Scheduler'
 ---
 
+## 1.0.1 (2024-06-24)
+
+### Changed
+
+- Views are not sorted alphabetically.
+
+### Fixed
+
+- Issue preventing items to be displayed when adding them to the timeline.
+- Chaching of table metadata to improve performance.
+
+---
+
 ## 1.0.0 (2024-06-14)
 
 First release! In this version we added the ability to save filters to personal views. These views are stored in the dynamics environment and offer a more permanent way to save and re-use filters.
