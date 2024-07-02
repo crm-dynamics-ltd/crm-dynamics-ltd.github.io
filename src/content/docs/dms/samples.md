@@ -1,5 +1,5 @@
 ---
-title: "Samples"
+title: 'Samples'
 date: 2024-05-03T16:00:43+01:00
 sidebar:
   order: 21
@@ -15,22 +15,25 @@ You can copy and paste these snippets directly into your template to get some st
 
 ```xml title="Primary"
 <fetch>
-  <entity name="crmd_dms_proposal">
-    <filter type="and">
-      <condition attribute="activityid" operator="eq" value="%{rowId}" />
-    </filter>
-  </entity>
+    <entity name='crmd_dms_proposal'>
+        <filter type='and'>
+            <condition attribute='activityid' operator='eq' value='%{rowId}' />
+        </filter>
+    </entity>
 </fetch>
 ```
 
 ```xml title="Query1"
 <!-- v0.8.8+ -->
 <fetch>
-  <entity name="crmd_dms_signee">
-    <filter type="and">
-      <condition attribute="crmd_proposalid" operator="eq" value="%{rowId}" />
-    </filter>
-  </entity>
+    <entity name="crmd_dms_signee">
+        <attribute name="crmd_firstname" />
+        <attribute name="crmd_lastname" />
+        <attribute name="crmd_signatureimage" />
+        <filter type="and">
+            <condition attribute="crmd_proposalid" operator="eq" value="%{rowId}" />
+        </filter>
+    </entity>
 </fetch>
 ```
 
@@ -51,8 +54,7 @@ You can copy and paste these snippets directly into your template to get some st
           <span>Signature:</span>
         </p>
         <p>
-          <img
-            src='${[Convert.ToBase64SrcString(File("crmd_signatureimage"))]}' />
+          <img src='${[Convert.ToBase64SrcString(File("crmd_signatureimage"))]}' />
         </p>
         <p>
           <span>Signed On: ${[crmd_signedon]}</span>
