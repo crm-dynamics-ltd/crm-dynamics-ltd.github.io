@@ -2,6 +2,18 @@
 title: 'Scheduler'
 ---
 
+## 1.0.2 (2024-07--09)
+
+### Added
+
+- Zoom controls
+
+### Changed
+
+- The key used to control the zoom changed from <kbd>CTRL</kbd> to <kbd>SHIFT</kbd> to avoid browser conflict.
+
+---
+
 ## 1.0.1 (2024-06-24)
 
 ### Changed
