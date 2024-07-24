@@ -5,9 +5,11 @@ title: 'Quote Manager'
 ## 2.5.1 (2024-06-21)
 
 ### Added
+
 - Ability to hide and/or exclude from calculations, suggestions by default.
 
 ### Fixed
+
 - Spanish translations containing unwanted characters.
 - Search grid would jump to the top when selecting or deselecting an item. (#836)
 - Refresh prices dialog would error when no price list is selected and the system is configured not to use price list items. (#835)
