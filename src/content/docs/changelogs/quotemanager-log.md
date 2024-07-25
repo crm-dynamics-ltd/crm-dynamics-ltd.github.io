@@ -2,6 +2,19 @@
 title: 'Quote Manager'
 ---
 
+## 2.6.0 (2024-07-25)
+
+### Added
+
+- Ability to default visibility and calculation exclusion for bundled items.
+
+### Fixed
+
+- Issue with calculated fields when a default value was set to an expression.
+- Search results when using anything other than the global search will now be returned in the same order as they were typed.
+
+---
+
 ## 2.5.1 (2024-06-21)
 
 ### Added
