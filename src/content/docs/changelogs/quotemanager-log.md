@@ -2,6 +2,25 @@
 title: 'Quote Manager'
 ---
 
+## 2.7.0 (2024-09-04)
+
+### Added
+
+- Added colours for different quote line types.
+- Added insert section button to toolbar on price management grid.
+- Added section and pagebreak options to context menu.
+
+### Changed
+
+- Pagebreaks are now allowed within sections.
+- Pagebreaks are indicated with a dashed red line below the selected line.
+
+### Fixed
+
+- Section toggle did not detach child lines when deselected. Toggle functionality has been removed and icon only appears on section lines. (#857)
+
+---
+
 ## 2.6.0 (2024-07-25)
 
 ### Added
