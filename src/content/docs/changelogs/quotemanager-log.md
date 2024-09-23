@@ -6,14 +6,14 @@ title: 'Quote Manager'
 
 ### Added
 
-- Added colours for different quote line types.
-- Added insert section button to toolbar on price management grid.
-- Added section and pagebreak options to context menu.
+- Added colours for different quote line types. (#858)
+- Added insert section button to toolbar on price management grid. (#850)
+- Added section and pagebreak options to context menu. (#850)
 
 ### Changed
 
-- Pagebreaks are now allowed within sections.
-- Pagebreaks are indicated with a dashed red line below the selected line.
+- Pagebreaks are now allowed within sections. (#851)
+- Pagebreaks are indicated with a dashed red line below the selected line. (#852)
 
 ### Fixed
 
