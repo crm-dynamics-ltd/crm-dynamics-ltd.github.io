@@ -2,6 +2,24 @@
 title: 'Quote Manager'
 ---
 
+## 2.7.1 (2024-09-26)
+
+### Added
+
+- Added optional Account filter to Quote Line History. (#860)
+
+### Changed
+
+- Make and Category drop-downs in search grid follow proper numeric sorting. (#861)
+- Percentage and price fields are no longer fixed to 2dp.
+
+### Fixed
+
+- Dragging configurations within the quote no longer breaks the grid layout. (#859)
+- Quote Line History state management issue. History data relating to the first product viewed would be shown for all subsequently viewed lines. (#862)
+
+---
+
 ## 2.7.0 (2024-09-04)
 
 ### Added
