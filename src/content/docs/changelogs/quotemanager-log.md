@@ -2,6 +2,14 @@
 title: 'Quote Manager'
 ---
 
+## 2.7.2 (2024-10-08)
+
+### Fixed
+
+- Quote Header totals were not updating if prices were refreshed using the prompt that appears after cloning. (#864)
+
+---
+
 ## 2.7.1 (2024-09-26)
 
 ### Added
