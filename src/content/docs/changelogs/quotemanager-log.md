@@ -2,11 +2,17 @@
 title: 'Quote Manager'
 ---
 
-## 2.7.2 (2024-10-08)
+## 2.7.2 (2024-10-28)
+
+### Added
+
+- Spanish translations language code 3082 (Dialogs and Quote Header form). (#866)
 
 ### Fixed
 
 - Quote Header totals were not updating if prices were refreshed using the prompt that appears after cloning. (#864)
+- Applying a bulk discount was not refreshing subtotal lines with the updated value. (#865)
+- Spanish (language code 1034) translations missing inverted question marks.
 
 ---
 
