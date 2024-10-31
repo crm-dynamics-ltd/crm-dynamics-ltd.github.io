@@ -2,10 +2,11 @@
 title: 'Quote Manager'
 ---
 
-## 2.7.2 (2024-10-28)
+## 2.8.0 (2024-10-30)
 
 ### Added
 
+- Mechanism to close the quote as "Won" or "Lost" with the ability to provide a reason. The process makes use of quick create forms to create the **Quote Close** record and allows for fine customisation via workflow, business rule and relationship mappings.
 - Spanish translations language code 3082 (Dialogs and Quote Header form). (#866)
 
 ### Fixed
