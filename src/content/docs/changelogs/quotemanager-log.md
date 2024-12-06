@@ -2,6 +2,17 @@
 title: 'Quote Manager'
 ---
 
+## 2.8.1 (2024-12-06)
+
+### Fixed
+
+- Configurations cannot have a discount applied to them anymore, the discount comes instead from its children. (#890)
+- Headers and lines are not closed as lost or won at the same time. This has the benefit that if an error occurs during the status change of any of the record, the entire process is reverted and leaves not half-opened or half-closed quote. (#889)
+- Issue where the configuration was saved to the database with the wrong data. (#891)
+- General performance improvements and maintenance.
+
+---
+
 ## 2.8.0 (2024-10-30)
 
 ### Added
