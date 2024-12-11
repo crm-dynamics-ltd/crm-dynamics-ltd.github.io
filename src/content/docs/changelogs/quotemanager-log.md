@@ -2,13 +2,19 @@
 title: 'Quote Manager'
 ---
 
-## 2.8.1 (2024-12-06)
+## 2.8.1 (2024-12-11)
+
+### Added
+
+- Configuration now have their prices and number fields hidden. This is because the value of these fields is calculated and rolled up from the children. Two new i18n keys have been added to display a message in the user language: `plugins.cpq.configuration.fields.float_value` and `plugins.cpq.configuration.fields.currency_value`.
 
 ### Fixed
 
 - Configurations cannot have a discount applied to them anymore, the discount comes instead from its children. (#890)
 - Headers and lines are not closed as lost or won at the same time. This has the benefit that if an error occurs during the status change of any of the record, the entire process is reverted and leaves not half-opened or half-closed quote. (#889)
 - Issue where the configuration was saved to the database with the wrong data. (#891)
+- Bug where product associations were retrieved for non standard lines. This caused severe performance issues for environment that use this feature extensively.
+- Issue when revising a quote.
 - General performance improvements and maintenance.
 
 ---
