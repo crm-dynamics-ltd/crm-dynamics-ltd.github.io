@@ -2,7 +2,16 @@
 title: 'Scheduler'
 ---
 
-## 1.0.2 (2024-07--09)
+## 1.0.4 (2025-01-31)
+
+### Changed
+
+- The system retrieves all items with the specified page size. This allows to query more than the previous 5000 limit.
+- The item Drawer is now closed by default.
+
+---
+
+## 1.0.2 (2024-07-09)
 
 ### Added
 
